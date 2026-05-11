@@ -53,6 +53,9 @@ Recommended reverse proxy:
 curl http://127.0.0.1:8888/health
 ```
 
+  ![mole](https://github.com/bowwowxx/hermes-gateway-line-bot/blob/main/IMG_8598.jpg)  
+
+
 ## Hermes gateway requirement
 
 This bot expects Hermes gateway API server to already be running locally, for example:
