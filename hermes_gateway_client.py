@@ -16,6 +16,10 @@ class HermesGatewayClient:
         self.base_url = base_url.rstrip("/")
         self.api_key = api_key
         self.model = model
+        self._client = httpx.AsyncClient(timeout=300.0)
+
+    async def aclose(self) -> None:
+        await self._client.aclose()
 
     @property
     def _headers(self) -> Dict[str, str]:
@@ -32,14 +36,13 @@ class HermesGatewayClient:
             "instructions": instructions or LINE_BRIDGE_PROMPT,
             "store": True,
         }
-        async with httpx.AsyncClient(timeout=300.0) as client:
-            resp = await client.post(
-                "{base}/responses".format(base=self.base_url),
-                headers=self._headers,
-                json=payload,
-            )
-            resp.raise_for_status()
-            data = resp.json()
+        resp = await self._client.post(
+            "{base}/responses".format(base=self.base_url),
+            headers=self._headers,
+            json=payload,
+        )
+        resp.raise_for_status()
+        data = resp.json()
         return self._extract_text(data)
 
     def _extract_text(self, data: Dict[str, Any]) -> str:

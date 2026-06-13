@@ -10,4 +10,4 @@ fi
 
 . .venv/bin/activate
 pip install -r requirements.txt
-exec uvicorn app:app --host 127.0.0.1 --port "${LINE_BOT_PORT:-8888}"
+exec uvicorn app:app --host 0.0.0.0 --port "${LINE_BOT_PORT:-8766}"
