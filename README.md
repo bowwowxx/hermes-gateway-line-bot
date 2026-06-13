@@ -106,7 +106,7 @@ LINE_INCOMING_DIR=/path/to/hermes-gateway-line-bot/data/incoming
 ./stop.sh
 ```
 
-  ![mole](https://github.com/bowwowxx/hermes-gateway-line-bot/blob/main/IMG_8598.jpg)  
+  ![mole](https://github.com/bowwowxx/hermes-gateway-line-bot/blob/main/IMG_8598.png)  
 
 ## 目錄結構
 
