@@ -110,7 +110,7 @@ LINE_INCOMING_DIR=/path/to/hermes-gateway-line-bot/data/incoming
   ![mole](https://github.com/bowwowxx/hermes-gateway-line-bot/blob/main/IMG_8598.png)  
 
 ## PDF內容讀取測試
-  ![mole](https://github.com/bowwowxx/hermes-gateway-line-bot/blob/main/IMG_8598.png)  
+  ![mole](https://github.com/bowwowxx/hermes-gateway-line-bot/blob/main/IMG_8599.png)  
 
 
 ## 目錄結構
